@@ -25,6 +25,8 @@ Un script shell permettant d'exécuter facilement l'environnement Epitech dans u
 
 ## Installation
 
+> ⚠️ La première utilisation peut prendre plusieurs minutes car l'image Docker ([epitechcontent/epitest-docker](https://hub.docker.com/r/epitechcontent/epitest-docker)) doit être téléchargée (environ 2GB). Vous devrez peut-être vous connecter à Docker Hub avec vos identifiants (`docker login`) pour pouvoir télécharger l'image.
+
 ### Linux
 
 #### Ubuntu/Debian
