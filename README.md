@@ -27,6 +27,8 @@ Un script shell permettant d'exécuter facilement l'environnement Epitech dans u
 
 > ⚠️ La première utilisation peut prendre plusieurs minutes car l'image Docker ([epitechcontent/epitest-docker](https://hub.docker.com/r/epitechcontent/epitest-docker)) doit être téléchargée (environ 2GB). Vous devrez peut-être vous connecter à Docker Hub avec vos identifiants (`docker login`) pour pouvoir télécharger l'image.
 
+> ℹ️ Le script lance toujours l'environnement en mode linux/amd64, même sur les architectures ARM (comme les Mac M1->M4). Cela garantit une compatibilité maximale avec l'environnement Epitech, mais peut impacter légèrement les performances sur les processeurs ARM.
+
 ### Linux
 ![Fedora Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/fedora_example.png?raw=true)
 
