@@ -1,4 +1,4 @@
-# ![ultracube](https://avatars.githubusercontent.com/u/7068904?s=30 "logo") Epitest Docker Script
+# ![ultracube](https://avatars.githubusercontent.com/u/7068904?s=50 "logo") Epitest Docker Script
 
 ```bash
 $ epitest make
