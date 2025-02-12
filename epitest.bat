@@ -1,3 +1,9 @@
 @echo off
-docker rm -f valgrind-env 2>nul
-docker run -it --rm --platform linux/amd64 --name valgrind-env -v %cd%:/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest %*
+docker info >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Docker n'est pas lance. Veuillez demarrer Docker Desktop.
+    exit /b 1
+)
+
+docker rm -f epitest-environment 2>nul
+docker run -it --rm --platform linux/amd64 --name epitest-environment -v %cd%:/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest %*

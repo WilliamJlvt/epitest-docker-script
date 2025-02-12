@@ -1,4 +1,16 @@
 #!/bin/bash
 
+if ! docker info > /dev/null 2>&1; then
+    echo "Docker n'est pas lancé."
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        echo "Veuillez lancer Docker Desktop"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        echo "Lancez Docker avec : sudo systemctl start docker"
+    else
+        echo "Veuillez démarrer Docker"
+    fi
+    exit 1
+fi
+
 docker rm -f epitest-environment 2>/dev/null || true
 docker run -it --rm --platform linux/amd64 --name epitest-environment -v $(pwd):/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest "$@"
