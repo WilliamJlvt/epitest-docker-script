@@ -16,7 +16,7 @@ Makefile  includes/  src/  tests/
 
 Un script shell permettant d'exécuter facilement l'environnement Epitech dans un conteneur Docker.
 
-> ⚠️ Testé uniquement sur macOS Sonoma 15.3 - Les autres environnements sont listés à titre indicatif mais n'ont pas été vérifiés
+> ⚠️ Testé uniquement sur macOS Sonoma 15.3 et Windows 10 - Les autres environnements sont listés à titre indicatif mais n'ont pas été vérifiés
 
 ## Prérequis
 
