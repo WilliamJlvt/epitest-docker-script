@@ -85,33 +85,28 @@ source ~/.zshrc
 
 ### Windows
 
+Deux options sont disponibles :
+
+#### Option 1 : Script Batch (.bat) - Solution Native
 1. Installer [Docker Desktop pour Windows](https://docs.docker.com/desktop/windows/install/)
-2. Installer [Git Bash](https://gitforwindows.org/) ou WSL2 (recommandé)
-
-Avec Git Bash :
-```bash
-# Créer le dossier bin s'il n'existe pas
-mkdir -p ~/bin
-
-# Télécharger le script
-curl -o ~/bin/epitest https://raw.githubusercontent.com/WilliamJlvt/epitest-docker-script/main/epitest
-chmod +x ~/bin/epitest
-
-# Ajouter au PATH (à ajouter dans ~/.bashrc)
-echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+2. Créer un fichier `epitest.bat` dans `C:\Windows` avec le contenu suivant :
+```batch
+@echo off
+docker rm -f valgrind-env 2>nul
+docker run -it --rm --platform linux/amd64 --name valgrind-env -v %cd%:/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest %*
 ```
 
-Avec WSL2 (Ubuntu) :
+#### Option 2 : WSL2 (recommandé pour les développeurs)
+1. Installer [WSL2](https://docs.microsoft.com/fr-fr/windows/wsl/install)
+2. Installer [Docker Desktop pour Windows](https://docs.docker.com/desktop/windows/install/)
+3. Dans votre distribution Linux WSL2 :
 ```bash
-# Installation de Docker si non installé
-sudo apt update
-sudo apt install docker.io
-
 # Installation du script
 sudo wget -O /usr/local/bin/epitest https://raw.githubusercontent.com/WilliamJlvt/epitest-docker-script/main/epitest
 sudo chmod +x /usr/local/bin/epitest
 ```
+
+> Note: Si vous utilisez WSL2, assurez-vous d'activer l'intégration Docker dans les paramètres de Docker Desktop
 
 ## Utilisation
 
