@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker rm -f epitest-environment 2>/dev/null || true
+docker run --rm --platform linux/amd64 --name epitest-environment -v $(pwd):/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest "$@"
