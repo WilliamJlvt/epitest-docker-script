@@ -59,7 +59,7 @@ sudo chmod +x /usr/local/bin/epitest
 ```
 
 ### macOS
-
+![macOS Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/macos_example.png?raw=true)
 ```bash
 # Installation de Docker si non installé
 brew install --cask docker
@@ -84,7 +84,7 @@ source ~/.zshrc
 ```
 
 ### Windows
-
+![Windows Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/windows_example.png?raw=true)
 Deux options sont disponibles :
 
 #### Option 1 : Script Batch (.bat) - Solution Native
