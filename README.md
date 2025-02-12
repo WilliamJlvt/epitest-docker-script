@@ -89,10 +89,15 @@ source ~/.zshrc
 ```
 
 ### Windows
-![Windows Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/windows_example.png?raw=true)
 Deux options sont disponibles :
 
-#### Option 1 : Script Batch (.bat) - Solution Native
+#### Option 1 : Script Batch (.bat) - Solution Native *(non recommandé)*
+![Windows Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/windows_example.png?raw=true)
+Cette option, bien que plus simple à mettre en place, n'est pas recommandée pour plusieurs raisons :
+- Performance réduite par rapport à WSL2
+- Gestion des chemins Windows/Linux parfois problématique
+
+Si vous souhaitez tout de même utiliser cette option :
 1. Installer [Docker Desktop pour Windows](https://docs.docker.com/desktop/windows/install/)
 2. Créer un fichier `epitest.bat` dans `C:\Windows` avec le contenu suivant :
 ```batch
@@ -101,7 +106,7 @@ docker rm -f valgrind-env 2>nul
 docker run -it --rm --platform linux/amd64 --name valgrind-env -v %cd%:/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest %*
 ```
 
-#### Option 2 : WSL2 (recommandé pour les développeurs)
+#### Option 2 : WSL2 (recommandé pour les développeurs) *(recommandé)*
 1. Installer [WSL2](https://docs.microsoft.com/fr-fr/windows/wsl/install)
 2. Installer [Docker Desktop pour Windows](https://docs.docker.com/desktop/windows/install/)
 3. Dans votre distribution Linux WSL2 :
