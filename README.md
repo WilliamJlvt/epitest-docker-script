@@ -99,12 +99,7 @@ Cette option, bien que plus simple à mettre en place, n'est pas recommandée po
 
 Si vous souhaitez tout de même utiliser cette option :
 1. Installer [Docker Desktop pour Windows](https://docs.docker.com/desktop/windows/install/)
-2. Créer un fichier `epitest.bat` dans `C:\Windows` avec le contenu suivant :
-```batch
-@echo off
-docker rm -f valgrind-env 2>nul
-docker run -it --rm --platform linux/amd64 --name valgrind-env -v %cd%:/home/epitech -w /home/epitech epitechcontent/epitest-docker:latest %*
-```
+2. Créer un fichier `epitest.bat` dans `C:\Windows` avec le contenu du fichier [epitest.bat](https://raw.githubusercontent.com/WilliamJlvt/epitest-docker-script/main/epitest.bat)
 
 #### Option 2 : WSL2 (recommandé pour les développeurs) *(recommandé)*
 1. Installer [WSL2](https://docs.microsoft.com/fr-fr/windows/wsl/install)
