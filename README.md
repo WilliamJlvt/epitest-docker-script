@@ -16,7 +16,7 @@ Makefile  includes/  src/  tests/
 
 Un script shell permettant d'exécuter facilement l'environnement Epitech dans un conteneur Docker.
 
-> ⚠️ Testé uniquement sur macOS Sonoma 15.3 et Windows 10 - Les autres environnements sont listés à titre indicatif mais n'ont pas été vérifiés
+> ⚠️ Testé uniquement sur Fedora, macOS Sequoia 15.3 et Windows 10 - Les autres environnements sont listés à titre indicatif mais n'ont pas été vérifiés
 
 ## Prérequis
 
@@ -28,6 +28,7 @@ Un script shell permettant d'exécuter facilement l'environnement Epitech dans u
 > ⚠️ La première utilisation peut prendre plusieurs minutes car l'image Docker ([epitechcontent/epitest-docker](https://hub.docker.com/r/epitechcontent/epitest-docker)) doit être téléchargée (environ 2GB). Vous devrez peut-être vous connecter à Docker Hub avec vos identifiants (`docker login`) pour pouvoir télécharger l'image.
 
 ### Linux
+![Fedora Example](https://github.com/WilliamJlvt/epitest-docker-script/blob/main/screenshots/fedora_example.png?raw=true)
 
 #### Ubuntu/Debian
 ```bash
